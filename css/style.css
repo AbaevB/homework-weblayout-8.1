@@ -363,7 +363,7 @@ a {
 
 .container {
   width: 100%;
-  max-width: 1340px;
+  max-width: 1320px;
   margin: 0 auto;
   padding: 0 20px;
 }
@@ -539,7 +539,19 @@ a {
 
 .hero {
   padding: 80px 0 0;
-  margin: 0 0 80px;
+  margin: 0 0 78px;
+}
+@media (max-width: 1023px) {
+  .hero {
+    padding: 50px 0 0;
+    margin: 0 0 50px;
+  }
+}
+@media (max-width: 767px) {
+  .hero {
+    padding: 40px 0 0;
+    margin: 0 0 35px;
+  }
 }
 .hero__heading {
   display: flex;
@@ -547,6 +559,18 @@ a {
   align-items: flex-start;
   justify-content: space-between;
   margin: 0 0 80px;
+}
+@media (max-width: 1023px) {
+  .hero__heading {
+    margin: 0 0 38px;
+  }
+}
+@media (max-width: 767px) {
+  .hero__heading {
+    margin: 0;
+    gap: 15px;
+    flex-direction: column;
+  }
 }
 .hero__title {
   font-size: 86px;
@@ -556,11 +580,32 @@ a {
   margin: 0 0 30px;
   text-transform: uppercase;
 }
+@media (max-width: 1023px) {
+  .hero__title {
+    margin: 0 0 15px;
+    font-size: 44px;
+    line-height: 50px;
+  }
+}
+@media (max-width: 767px) {
+  .hero__title {
+    margin: 0 0 10px;
+    font-size: 32px;
+    line-height: 36px;
+  }
+}
 .hero__description {
   max-width: 600px;
   font-size: 18px;
   line-height: 26px;
   margin: 0;
+}
+@media (max-width: 1023px) {
+  .hero__description {
+    max-width: 440px;
+    font-size: 14px;
+    line-height: 20px;
+  }
 }
 .hero__button {
   display: flex;
@@ -572,6 +617,14 @@ a {
   letter-spacing: 0.02em;
   padding: 13px 0;
 }
+@media (max-width: 1023px) {
+  .hero__button {
+    font-size: 16px;
+    line-height: 20px;
+    padding: 5px 0;
+    gap: 11px;
+  }
+}
 .hero__button-icon {
   display: flex;
   align-items: center;
@@ -581,6 +634,12 @@ a {
   height: 64px;
   width: 53px;
 }
+@media (max-width: 1023px) {
+  .hero__button-subtrack {
+    width: 33px;
+    height: 40px;
+  }
+}
 .hero__button-arrow {
   position: absolute;
   top: 50%;
@@ -588,6 +647,12 @@ a {
   transform: translateY(-50%);
   width: 24px;
   height: 16px;
+}
+@media (max-width: 1023px) {
+  .hero__button-arrow {
+    width: 15px;
+    height: 13px;
+  }
 }
 .hero__link-list {
   display: flex;
@@ -599,12 +664,29 @@ a {
   justify-content: center;
   flex-wrap: wrap;
 }
+@media (max-width: 1099px) {
+  .hero__link-list {
+    gap: 20px;
+  }
+}
+@media (max-width: 767px) {
+  .hero__link-list {
+    display: none;
+  }
+}
 .hero__link {
   display: flex;
   font-size: 18px;
   line-height: 26px;
-  padding: 0 10px 20px;
+  padding: 0 10px 18px;
   border-bottom: 2px solid #000000;
+}
+@media (max-width: 1023px) {
+  .hero__link {
+    padding: 10px;
+    font-size: 14px;
+    line-height: 20px;
+  }
 }
 
 .main-video {
