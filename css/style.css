@@ -1200,6 +1200,17 @@ a {
     background-size: cover;
   }
 }
+@media (max-width: 1023px) {
+  .outro {
+    padding: 53px 0;
+    background: url("../images/vacancy-bg-tablet.jpg");
+  }
+}
+@media (max-width: 1023px) and (min-resolution: 2dppx) {
+  .outro {
+    background: url("../images/vacancy-bg-tablet@2x.jpg");
+  }
+}
 .outro::after {
   content: "";
   position: absolute;
@@ -1222,6 +1233,13 @@ a {
   margin: 0 0 30px 0;
   color: #ffffff;
 }
+@media (max-width: 1023px) {
+  .outro__note {
+    margin: 0 0 15px;
+    font-size: 12px;
+    line-height: 14px;
+  }
+}
 .outro__link {
   display: flex;
   flex-direction: column;
@@ -1237,6 +1255,13 @@ a {
   font-weight: 200;
   max-width: 400px;
   text-align: center;
+}
+@media (max-width: 1023px) {
+  .outro__link-title {
+    max-width: 300px;
+    font-size: 36px;
+    line-height: 40px;
+  }
 }
 .outro__link-icon {
   color: #000000;
