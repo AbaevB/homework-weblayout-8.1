@@ -1,26 +1,72 @@
 .governing {
   margin: 0 0 100px;
+  
+
+  @include vp-767 {
+    margin: 0 0 60px;
+  }
 
   &__title {
     font-size: 60px;
     line-height: 70px;
     letter-spacing: 0.02em;
-    margin: 0 0 75px;
+    margin: 0 0 79px;
     font-weight: 200;
     text-transform: uppercase;
+
+    @include vp-1023  {
+      margin: 0 0 49px;
+      font-size: 36px;
+      line-height: 40px;
+    }
+
+    @include vp-767 {
+      font-size: 26px;
+      line-height: 30px;
+      margin: 0 0 39px;
+    }
   }
 
   &__list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 60px 40px;
+    grid-auto-flow: dense;
+    gap: 59px 40px;
     padding: 0;
     margin: 0 0 100px;
     list-style: none;
+
+    @include vp-1023  {
+      margin: 0 0 60px;
+     gap: 30px 16px; 
+    }
+
+    @include vp-767 {
+     grid-template-columns: repeat(2, 1fr);
+     margin: 0 0 60px;
+     gap: 30px 15px; 
+    }
+
+    
   }
 
   &__item {
     display: flex;
+
+    &--text {
+      @include vp-767 {
+        grid-column: span 2;
+      }
+    }
+
+    &--moveable {
+
+      @include vp-767{
+        grid-column-start: 2;
+        grid-row-start: 4;
+      }
+      
+    }
   }
 
   &__text-card {
@@ -28,6 +74,32 @@
     padding: 40px;
     border-radius: 20px;
     height: 580px;
+    overflow: hidden;
+
+    @include vp-1023  {
+      height: 340px;
+      padding: 20px;
+    }
+
+    @include vp-767 {
+      padding: 20px;
+      height: 280px;
+    }
+
+    
+  }
+
+  &__text-inner {
+    @include vp-767 {
+      display: flex;
+      align-items: end;
+      gap: 20px;
+      padding-bottom: 18px;
+      margin: 0 0 20px;
+      border-bottom: 1px solid $color-iron;
+    }
+
+    
   }
 
   &__text-title {
@@ -36,6 +108,16 @@
     letter-spacing: -0.06em;
     font-weight: 300;
     margin: 0 0 15px;
+
+    @include vp-1023  {
+      font-size: 70px;
+      line-height: 60px;
+    
+    }
+
+    @include vp-767 {
+      margin: 0;
+    }
   }
 
   &__text-achievement {
@@ -44,12 +126,36 @@
     padding: 0 0 15px;
     margin: 0 0 15px;
     border-bottom: 1px solid $color-iron;
+
+    @include vp-1023  {
+      font-size: 12px;
+      line-height: 16px;
+      
+    }
+
+    @include vp-767 {
+      font-size: 16px;
+      line-height: 20px;
+      border: none;
+      margin: 0;
+      padding: 0;
+    }
   }
 
   &__text-description {
     font-size: 18px;
     line-height: 26px;
     margin: 0;
+
+    @include vp-1023  {
+      font-size: 12px;
+      line-height: 16px;
+    }
+
+    @include vp-767 {
+      font-size: 14px;
+      line-height: 20px;
+    }
   }
 
   &__slogan {
@@ -57,5 +163,16 @@
     margin: 0 auto;
     font-size: 18px;
     line-height: 26px;
+
+    @include vp-1023  {
+      max-width: 440px;
+      font-size: 14px;
+      line-height: 20px;
+    }
+
+    @include vp-767 {
+      max-width: unset;
+      width: 100%;
+    }
   }
 }
