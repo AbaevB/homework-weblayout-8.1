@@ -3,16 +3,11 @@
   border-bottom: 1px solid $color-gainsboro;
 
   @include vp-1023 {
-    padding: 17px 0 16px;
+    padding: 17px 0 18px;
   }
 
   .container {
-    max-width: 1728px;
-    padding: 0 50px;
-
-    @include vp-1023 {
-      padding: 0 20px;
-    }
+    max-width: 1668px;
   }
 
   &__content {
@@ -50,7 +45,7 @@
     }
 
     @include vp-767 {
-      margin: 0 76px 0 0;
+      margin: 0 70px 0 0;
     }
 
     svg {

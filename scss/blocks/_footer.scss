@@ -7,12 +7,7 @@
   }
 
   .container {
-    max-width: 1728px;
-    padding: 0 50px;
-
-    @include vp-1023 {
-      padding: 0 20px;
-    }
+    max-width: 1668px;
   }
 
   &__wrapper {
