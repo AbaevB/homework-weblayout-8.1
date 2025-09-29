@@ -25,6 +25,16 @@
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 1;
+    cursor: pointer;
+    color: $color-white;
+
+    &:hover {
+      color: $color-black;
+    }
+
+    &:hover .main-video__play-icon svg {
+      color: inherit;
+    }
   }
 
   &__play-icon {

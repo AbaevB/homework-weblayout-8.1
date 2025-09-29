@@ -32,7 +32,7 @@
   }
 
   &__icon {
-    background: $color-blue-charcoa;
+    background-color: $color-blue-charcoa;
     border-radius: 50%;
     position: absolute;
     height: 64px;
@@ -49,6 +49,10 @@
       height: 48px;
       bottom: 15px;
       right: 15px;
+      svg{
+        width: 18px;
+        height: 18px;
+      }
     }
 
     @include vp-767 {
@@ -56,7 +60,14 @@
       height: 40px;
       bottom: 10px;
       right: 10px;
+
+      svg{
+        width: 15px;
+        height: 15px;
+      }
     }
+
+
   }
 
   &__name {
@@ -92,9 +103,13 @@
     width: 100%;
     height: 100%;
 
-    &:hover ~ .governing-card__icon svg {
-      color: $color-white;
+    &:hover ~ .governing-card__icon  {
+      background-color: $color-white !important; 
     }
     
+
+    &:hover ~ .governing-card__icon svg path {
+      fill: $color-black !important;
+    }
   }
 }

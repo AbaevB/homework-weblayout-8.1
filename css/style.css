@@ -718,6 +718,14 @@ a {
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 1;
+  cursor: pointer;
+  color: #ffffff;
+}
+.main-video__play:hover {
+  color: #000000;
+}
+.main-video__play:hover .main-video__play-icon svg {
+  color: inherit;
 }
 .main-video__play-icon {
   height: 64px;
@@ -921,9 +929,9 @@ a {
 }
 
 .governing {
-  margin: 0 0 100px;
+  margin: 0 0 101px;
 }
-@media (max-width: 767px) {
+@media (max-width: 1023px) {
   .governing {
     margin: 0 0 60px;
   }
@@ -1123,7 +1131,7 @@ a {
   height: 100%;
 }
 .governing-card__icon {
-  background: #1d252d;
+  background-color: #1d252d;
   border-radius: 50%;
   position: absolute;
   height: 64px;
@@ -1142,6 +1150,10 @@ a {
     bottom: 15px;
     right: 15px;
   }
+  .governing-card__icon svg {
+    width: 18px;
+    height: 18px;
+  }
 }
 @media (max-width: 767px) {
   .governing-card__icon {
@@ -1149,6 +1161,10 @@ a {
     height: 40px;
     bottom: 10px;
     right: 10px;
+  }
+  .governing-card__icon svg {
+    width: 15px;
+    height: 15px;
   }
 }
 .governing-card__name {
@@ -1184,8 +1200,11 @@ a {
   width: 100%;
   height: 100%;
 }
-.governing-card__link:hover ~ .governing-card__icon svg {
-  color: #ffffff;
+.governing-card__link:hover ~ .governing-card__icon {
+  background-color: #ffffff !important;
+}
+.governing-card__link:hover ~ .governing-card__icon svg path {
+  fill: #000000 !important;
 }
 
 .outro {
@@ -1198,6 +1217,24 @@ a {
   .outro {
     background: url("../images/vacancy-bg@2x.jpg") no-repeat center;
     background-size: cover;
+  }
+}
+@media (max-width: 1023px) {
+  .outro {
+    padding: 55px 0;
+    background: url("../images/vacancy-bg-tablet.jpg") no-repeat center;
+    background-size: cover;
+  }
+}
+@media (max-width: 1023px) and (min-resolution: 2dppx) {
+  .outro {
+    background: url("../images/vacancy-bg-tablet@2x.jpg") no-repeat center;
+    background-size: cover;
+  }
+}
+@media (max-width: 767px) {
+  .outro {
+    padding: 33px 0;
   }
 }
 .outro::after {
@@ -1222,6 +1259,18 @@ a {
   margin: 0 0 30px 0;
   color: #ffffff;
 }
+@media (max-width: 1023px) {
+  .outro__note {
+    margin: 0 0 15px;
+    font-size: 12px;
+    line-height: 14px;
+  }
+}
+@media (max-width: 767px) {
+  .outro__note {
+    margin: 0 0 10px;
+  }
+}
 .outro__link {
   display: flex;
   flex-direction: column;
@@ -1238,6 +1287,22 @@ a {
   max-width: 400px;
   text-align: center;
 }
+@media (max-width: 1023px) {
+  .outro__link-title {
+    margin: 0 0 15px;
+    max-width: 300px;
+    font-size: 36px;
+    line-height: 40px;
+  }
+}
+@media (max-width: 767px) {
+  .outro__link-title {
+    margin: 0 0 10px;
+    max-width: 200px;
+    font-size: 26px;
+    line-height: 30px;
+  }
+}
 .outro__link-icon {
   color: #000000;
   display: flex;
@@ -1247,6 +1312,26 @@ a {
   width: 64px;
   background-color: #ffffff;
   border-radius: 50%;
+}
+@media (max-width: 1023px) {
+  .outro__link-icon {
+    width: 48px;
+    height: 48px;
+  }
+  .outro__link-icon svg {
+    width: 18px;
+    height: 15px;
+  }
+}
+@media (max-width: 767px) {
+  .outro__link-icon {
+    width: 40px;
+    height: 40px;
+  }
+  .outro__link-icon svg {
+    width: 15px;
+    height: 13px;
+  }
 }
 
 .socials {
