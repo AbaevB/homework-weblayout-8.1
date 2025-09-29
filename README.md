@@ -11,7 +11,7 @@
 ```css
 .container {
   width: 100%;
-  max-width: 1340px;
+  max-width: 1320px;
   margin: 0 auto;
   padding: 0 20px;
 }
@@ -35,3 +35,11 @@
 - На разрешении 767px уменьшен правый марджин для блока *header__menu*
 
 - На разрешении 1023px увеличен нижний паддинг для всего блока *header*
+
+
+## Feature hero
+
+### Разрешение 1728px
+
+- Изменение нижнего отступа для *hero__heading*
+- Изменение паддинга для *hero__link*

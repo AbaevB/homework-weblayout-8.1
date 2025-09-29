@@ -60,19 +60,21 @@
   &__link-list {
     display: flex;
     align-items: center;
-    margin: 0;
+    margin: 0 ;
     padding: 0;
     list-style: none;
     gap: 80px;
     justify-content: center;
     flex-wrap: wrap;
+
+   
   }
 
   &__link {
     display: flex;
     font-size: 18px;
     line-height: 26px;
-    padding: 0 10px 20px;
+    padding: 0 10px 18px;
     border-bottom: 2px solid $color-black;
   }
 }
