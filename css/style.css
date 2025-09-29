@@ -921,9 +921,9 @@ a {
 }
 
 .governing {
-  margin: 0 0 100px;
+  margin: 0 0 101px;
 }
-@media (max-width: 767px) {
+@media (max-width: 1023px) {
   .governing {
     margin: 0 0 60px;
   }
@@ -1202,13 +1202,15 @@ a {
 }
 @media (max-width: 1023px) {
   .outro {
-    padding: 53px 0;
-    background: url("../images/vacancy-bg-tablet.jpg");
+    padding: 55px 0;
+    background: url("../images/vacancy-bg-tablet.jpg") no-repeat center;
+    background-size: cover;
   }
 }
 @media (max-width: 1023px) and (min-resolution: 2dppx) {
   .outro {
-    background: url("../images/vacancy-bg-tablet@2x.jpg");
+    background: url("../images/vacancy-bg-tablet@2x.jpg") no-repeat center;
+    background-size: cover;
   }
 }
 .outro::after {
@@ -1258,6 +1260,7 @@ a {
 }
 @media (max-width: 1023px) {
   .outro__link-title {
+    margin: 0 0 15px;
     max-width: 300px;
     font-size: 36px;
     line-height: 40px;
@@ -1272,6 +1275,12 @@ a {
   width: 64px;
   background-color: #ffffff;
   border-radius: 50%;
+}
+@media (max-width: 1023px) {
+  .outro__link-icon {
+    width: 48px;
+    height: 48px;
+  }
 }
 
 .socials {
