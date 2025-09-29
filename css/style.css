@@ -923,30 +923,97 @@ a {
 .governing {
   margin: 0 0 100px;
 }
+@media (max-width: 767px) {
+  .governing {
+    margin: 0 0 60px;
+  }
+}
 .governing__title {
   font-size: 60px;
   line-height: 70px;
   letter-spacing: 0.02em;
-  margin: 0 0 75px;
+  margin: 0 0 79px;
   font-weight: 200;
   text-transform: uppercase;
+}
+@media (max-width: 1023px) {
+  .governing__title {
+    margin: 0 0 49px;
+    font-size: 36px;
+    line-height: 40px;
+  }
+}
+@media (max-width: 767px) {
+  .governing__title {
+    font-size: 26px;
+    line-height: 30px;
+    margin: 0 0 39px;
+  }
 }
 .governing__list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 60px 40px;
+  grid-auto-flow: dense;
+  gap: 59px 40px;
   padding: 0;
   margin: 0 0 100px;
   list-style: none;
 }
+@media (max-width: 1023px) {
+  .governing__list {
+    margin: 0 0 60px;
+    gap: 30px 16px;
+  }
+}
+@media (max-width: 767px) {
+  .governing__list {
+    grid-template-columns: repeat(2, 1fr);
+    margin: 0 0 60px;
+    gap: 30px 15px;
+  }
+}
 .governing__item {
   display: flex;
+}
+@media (max-width: 767px) {
+  .governing__item--text {
+    grid-column: span 2;
+  }
+}
+@media (max-width: 767px) {
+  .governing__item--moveable {
+    grid-column-start: 2;
+    grid-row-start: 4;
+  }
 }
 .governing__text-card {
   background-color: #F7F7F4;
   padding: 40px;
   border-radius: 20px;
   height: 580px;
+  overflow: hidden;
+}
+@media (max-width: 1023px) {
+  .governing__text-card {
+    height: 340px;
+    padding: 20px;
+  }
+}
+@media (max-width: 767px) {
+  .governing__text-card {
+    padding: 20px;
+    height: 280px;
+  }
+}
+@media (max-width: 767px) {
+  .governing__text-inner {
+    display: flex;
+    align-items: end;
+    gap: 20px;
+    padding-bottom: 18px;
+    margin: 0 0 20px;
+    border-bottom: 1px solid #CBCCCC;
+  }
 }
 .governing__text-title {
   font-size: 110px;
@@ -955,6 +1022,17 @@ a {
   font-weight: 300;
   margin: 0 0 15px;
 }
+@media (max-width: 1023px) {
+  .governing__text-title {
+    font-size: 70px;
+    line-height: 60px;
+  }
+}
+@media (max-width: 767px) {
+  .governing__text-title {
+    margin: 0;
+  }
+}
 .governing__text-achievement {
   font-size: 18px;
   line-height: 26px;
@@ -962,16 +1040,56 @@ a {
   margin: 0 0 15px;
   border-bottom: 1px solid #CBCCCC;
 }
+@media (max-width: 1023px) {
+  .governing__text-achievement {
+    font-size: 12px;
+    line-height: 16px;
+  }
+}
+@media (max-width: 767px) {
+  .governing__text-achievement {
+    font-size: 16px;
+    line-height: 20px;
+    border: none;
+    margin: 0;
+    padding: 0;
+  }
+}
 .governing__text-description {
   font-size: 18px;
   line-height: 26px;
   margin: 0;
+}
+@media (max-width: 1023px) {
+  .governing__text-description {
+    font-size: 12px;
+    line-height: 16px;
+  }
+}
+@media (max-width: 767px) {
+  .governing__text-description {
+    font-size: 14px;
+    line-height: 20px;
+  }
 }
 .governing__slogan {
   max-width: 540px;
   margin: 0 auto;
   font-size: 18px;
   line-height: 26px;
+}
+@media (max-width: 1023px) {
+  .governing__slogan {
+    max-width: 440px;
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+@media (max-width: 767px) {
+  .governing__slogan {
+    max-width: unset;
+    width: 100%;
+  }
 }
 
 .governing-card {
@@ -980,10 +1098,25 @@ a {
   flex-direction: column;
   width: 100%;
 }
+.governing-card:hover .governing-card__icon svg {
+  color: #ffffff;
+}
 .governing-card__picture {
   height: 580px;
   position: relative;
   margin: 0 0 15px;
+}
+@media (max-width: 1023px) {
+  .governing-card__picture {
+    margin: 0 0 9px;
+    height: 340px;
+  }
+}
+@media (max-width: 767px) {
+  .governing-card__picture {
+    margin: 0 0 10px;
+    height: 240px;
+  }
 }
 .governing-card__picture img {
   width: 100%;
@@ -1002,6 +1135,22 @@ a {
   right: 20px;
   color: #ffffff;
 }
+@media (max-width: 1023px) {
+  .governing-card__icon {
+    width: 48px;
+    height: 48px;
+    bottom: 15px;
+    right: 15px;
+  }
+}
+@media (max-width: 767px) {
+  .governing-card__icon {
+    width: 40px;
+    height: 40px;
+    bottom: 10px;
+    right: 10px;
+  }
+}
 .governing-card__name {
   font-size: 24px;
   line-height: 32px;
@@ -1010,10 +1159,23 @@ a {
   margin: 0;
   text-transform: uppercase;
 }
+@media (max-width: 1023px) {
+  .governing-card__name {
+    margin: 0 0 5px;
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
 .governing-card__position {
   font-size: 14px;
   line-height: 20px;
   margin: 0;
+}
+@media (max-width: 1023px) {
+  .governing-card__position {
+    font-size: 12px;
+    line-height: 16px;
+  }
 }
 .governing-card__link {
   position: absolute;
@@ -1021,6 +1183,9 @@ a {
   left: 0;
   width: 100%;
   height: 100%;
+}
+.governing-card__link:hover ~ .governing-card__icon svg {
+  color: #ffffff;
 }
 
 .outro {
