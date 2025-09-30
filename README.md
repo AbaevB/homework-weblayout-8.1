@@ -59,5 +59,46 @@
 ### Для планшетного разрешения
 
 - Изменение размеров шрифта и нижнего марджина для заголовка секции *governing*
-- 
 
+## Feature outro
+
+Изменение свойства `background` на `background-image` для секции *outro*
+
+```scss
+.outro {
+  background-image: url("../images/vacancy-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 108px 0;
+  position: relative;
+
+
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../images/vacancy-bg@2x.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  @include vp-1023  {
+    padding: 55px 0;
+    background-image: url("../images/vacancy-bg-tablet.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    @media (min-resolution: 2dppx)  {
+      background-image: url("../images/vacancy-bg-tablet@2x.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  }
+}
+
+```
+
+## Feature footer
+
+Приведение блока в соответствие с макетом PP на всех разрешениях
