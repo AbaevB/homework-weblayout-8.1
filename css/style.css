@@ -681,6 +681,12 @@ a {
   padding: 0 10px 18px;
   border-bottom: 2px solid #000000;
 }
+.hero__link:hover {
+  color: rgb(167, 168, 170);
+}
+.hero__link:focus {
+  color: rgb(167, 168, 170);
+}
 @media (max-width: 1023px) {
   .hero__link {
     padding: 10px;
@@ -1208,28 +1214,36 @@ a {
 }
 
 .outro {
-  background: url("../images/vacancy-bg.jpg") no-repeat center;
+  background-image: url("../images/vacancy-bg.jpg");
   background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   padding: 108px 0;
   position: relative;
 }
 @media (min-resolution: 2dppx) {
   .outro {
-    background: url("../images/vacancy-bg@2x.jpg") no-repeat center;
+    background-image: url("../images/vacancy-bg@2x.jpg");
     background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
   }
 }
 @media (max-width: 1023px) {
   .outro {
     padding: 55px 0;
-    background: url("../images/vacancy-bg-tablet.jpg") no-repeat center;
+    background-image: url("../images/vacancy-bg-tablet.jpg");
     background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
   }
 }
 @media (max-width: 1023px) and (min-resolution: 2dppx) {
   .outro {
-    background: url("../images/vacancy-bg-tablet@2x.jpg") no-repeat center;
+    background-image: url("../images/vacancy-bg-tablet@2x.jpg");
     background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
   }
 }
 @media (max-width: 767px) {
@@ -1276,6 +1290,12 @@ a {
   flex-direction: column;
   align-items: center;
 }
+.outro__link:hover .outro__link-icon {
+  background-color: #1d252d;
+}
+.outro__link:hover .outro__link-icon svg path {
+  fill: #ffffff;
+}
 .outro__link-title {
   font-size: 60px;
   line-height: 70px;
@@ -1312,6 +1332,9 @@ a {
   width: 64px;
   background-color: #ffffff;
   border-radius: 50%;
+}
+.outro__link-icon svg path {
+  fill: #ffffff;
 }
 @media (max-width: 1023px) {
   .outro__link-icon {
@@ -1368,7 +1391,7 @@ a {
 }
 @media (max-width: 1023px) {
   .footer {
-    padding: 40px 0;
+    padding: 38px 0 15px;
   }
 }
 .footer .container {
@@ -1414,6 +1437,11 @@ a {
 .footer__logo-link:hover, .footer__logo-link:focus-visible {
   opacity: 0.7;
 }
+@media (max-width: 1023px) {
+  .footer__logo-link {
+    margin: 0 0 35px;
+  }
+}
 @media (max-width: 767px) {
   .footer__logo-link {
     margin: 0 0 30px;
@@ -1441,8 +1469,14 @@ a {
   gap: 10px;
   margin: 0 0 40px;
 }
+@media (max-width: 1023px) {
+  .footer__contacts {
+    gap: 12px;
+  }
+}
 @media (max-width: 767px) {
   .footer__contacts {
+    gap: 10px;
     margin: 0 0 30px;
   }
 }
@@ -1489,7 +1523,8 @@ a {
 .footer__link-list {
   display: grid;
   grid-template-columns: 320px 320px;
-  margin: 0 0 20px;
+  margin: 0;
+  /*margin: 0 0 20px;*/
   padding: 0;
   list-style: none;
   gap: 20px 120px;
