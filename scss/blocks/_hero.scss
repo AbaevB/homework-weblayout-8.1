@@ -138,6 +138,14 @@
     padding: 0 10px 18px;
     border-bottom: 2px solid $color-black;
 
+    &:hover {
+      color: rgba(167, 168, 170, 1);
+    }
+
+    &:focus {
+      color: rgba(167, 168, 170, 1);
+    }
+
     @include vp-1023  {
       padding: 10px;
       font-size: 14px;
