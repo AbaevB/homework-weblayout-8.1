@@ -6,7 +6,7 @@
   }
 
   @include vp-767 {
-    margin: 0 0 43px;
+    margin: 0 0 40px;
   }
 
   &__list {
@@ -48,7 +48,7 @@
 
     &:last-child {
       @include vp-1023  {
-        padding: 0 0 35px;
+        padding: 0 0 40px;
       }
     }
   }
@@ -88,7 +88,7 @@
     margin: 40px 0 0 0;
 
     @include vp-1023  {
-      margin: 15px 0 0 0;
+      margin: 14px 0 0 0;
       font-size: 14px;
     line-height: 20px;
     }
@@ -127,6 +127,10 @@
       content: counter(subitem)".";
       position: absolute;
       left: 6px;
+
+      @include vp-1023  {
+        left: 5px;
+      }
     }
 
     &:not(:last-child) {
