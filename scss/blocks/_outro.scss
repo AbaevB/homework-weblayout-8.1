@@ -1,36 +1,12 @@
 .outro {
-  background-image: url("../images/vacancy-bg.jpg");
+  background: url("../images/vacancy-bg.jpg") no-repeat center;
   background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
   padding: 108px 0;
   position: relative;
 
-
-
   @media (min-resolution: 2dppx) {
-    background-image: url("../images/vacancy-bg@2x.jpg");
+    background: url("../images/vacancy-bg@2x.jpg") no-repeat center;
     background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-
-  @include vp-1023  {
-    padding: 55px 0;
-    background-image: url("../images/vacancy-bg-tablet.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    @media (min-resolution: 2dppx)  {
-      background-image: url("../images/vacancy-bg-tablet@2x.jpg");
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-    }
-  }
-
-  @include vp-767 {
-    padding: 33px 0;
   }
 
   &::after {
@@ -56,34 +32,23 @@
     line-height: 20px;
     margin: 0 0 30px 0;
     color: $color-white;
-
-    @include vp-1023  {
-      margin: 0 0 15px;
-      font-size: 12px;
-      line-height: 14px;
-    }
-
-    @include vp-767 {
-      margin: 0 0 10px;
-    }
   }
 
   &__link {
     display: flex;
     flex-direction: column;
     align-items: center;
+    transition: background-color 0.3ms ease-in-out, color 0.3ms ease-in-out;
 
-    &:hover .outro__link-icon {
-      background-color: $color-blue-charcoa;
+    &:hover, &:focus-visible  {
+      .outro__link-icon{
+        background-color: $color-blue-charcoa;
+        color: $color-white;
+      }
     }
 
-    &:hover .outro__link-icon svg path {
-      fill: $color-white;
-    }
-  }
-
-  &__link-title {
-    font-size: 60px;
+    &-title {
+      font-size: 60px;
     line-height: 70px;
     letter-spacing: 0.02em;
     margin: 0 0 30px 0;
@@ -92,23 +57,25 @@
     font-weight: 200;
     max-width: 400px;
     text-align: center;
-
-    @include vp-1023  {
-      margin: 0 0 15px;
-      max-width: 300px;
-      font-size: 36px;
-      line-height: 40px;
     }
 
-    @include vp-767 {
-      margin: 0 0 10px;
-      max-width: 200px;
-      font-size: 26px;
-      line-height: 30px;
+    &-icon  {
+      color: $color-black;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 64px;
+      width: 64px;
+      background-color: $color-white;
+      border-radius: 50%;
     }
   }
 
-  &__link-icon {
+  /*&__link-title {
+    
+  }*/
+
+  /*&__link-icon {
     color: $color-black;
     display: flex;
     align-items: center;
@@ -117,28 +84,5 @@
     width: 64px;
     background-color: $color-white;
     border-radius: 50%;
-
-    svg path {
-      fill: $color-white;
-    }
-
-    @include vp-1023  {
-      width: 48px;
-      height: 48px;
-      svg {
-        width: 18px;
-        height: 15px;
-      }
-    }
-
-    @include vp-767 {
-      width: 40px;
-      height: 40px;
-
-      svg {
-        width: 15px;
-        height: 13px;
-      }
-    }
-  }
+  }*/
 }
